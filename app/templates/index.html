@@ -8,10 +8,10 @@
         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
-    <body class="bg-dark">
+    <body class="bg">
         <!--navbar links-->     
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="{{url_}}">in italiano</a>
+            <a class="navbar-brand" href="{{url_}}"><span style="color:green">in </span><span style="color:white">itali</span><span style="color:red">ano</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" 
         data-target="#navbarTogglerDemo02" 
         aria-controls="navbarTogglerDemo02" aria-expanded="false" 
@@ -22,37 +22,57 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('index')}}">Home</a>
+                    <a class="nav-link" href="{{url_for('index')}}">Articoli</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('about')}}">About</a>
+                    <a class="nav-link" href="{{url_for('about')}}">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/dagrewal/initaliano">GitHub Repository</a>
+                    <a class="nav-link" href="https://github.com/dagrewal/initaliano">GitHub</a>
                 </li>
             </ul>
         </div>
         </nav>
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-12">
-                <div class="jumbotron custom-jumbotron bg-dark">
-                    <div class="container">
-                        {% block head %}
-                        <h1 class="text-center page_title">Benvenuto</h1>
-                        <p class="lead text-center page_subtitle">to my blog, where I detail my experience of learning the wonderful language that is Italian!</h2>
-                        <hr class="custom-hr" />
-                        <div class="row">
-                            <div class="col-12 form-group">
-                                <form action="/results" method="get">
-                                    <input type="text" class="form-control form-control" name="query" placeholder="Enter a word, a phrase or a sentence to translate...">
-                                    <div class="row d-flex justify-content-center">
-                                        <button type="submit" class="btn custom-btn text-white">Translate Text</button>
-                                    </div>
-                                </form>
-                            </div>
+                <div class="container">
+                    {% block head %}
+                    <h1 class="text-center text page_title">Articoli</h1>
+                    <hr class="custom-hr" />
+                    {% endblock %}
+                    {% block content %}
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="#" class="thumbnail">
+                                <div class="thumbnail">
+                                    <img src="../static/images/means_of_transport.jpg" width="260" height="180" alt="Means of Transport">
+                                    <h5>Means of Transport</h5>
+                                    <p class="small">Describing the means of transport in London.</p>
+                                </div>
+                            </a>
                         </div>
-                        {% endblock %}
+                        <div class="col-4">
+                            <a href="#" class="thumbnail">
+                                <div class="thumbnail">
+                                    <img src="../static/images/where_i_live.jpg" width="260" height="180" alt="Where I Live">
+                                    <h5>Where I Live</h5>
+                                    <p class="small">Describing area where I live.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="#" class="thumbnail">
+                                <div class="thumbnail">
+                                    <img src="../static/images/typical_weekend.jpg" width="260" height="180" alt="Typical Weekend">
+                                    <h5>My Typical Weekend</h5>
+                                    <p class="small">Describing a typical weekend.</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+                    {% endblock %}
                 </div>
             </div>
         </div>
+    </body>
+</html>
