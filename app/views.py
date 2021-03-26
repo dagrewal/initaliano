@@ -15,3 +15,8 @@ def index():
 def about():
 
     return render_template("about.html")
+
+@app.route("/vicini-di-casa")
+def vicini_di_casa():
+
+    return render_template("vicini di casa.html")
