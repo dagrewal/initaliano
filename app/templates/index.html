@@ -13,7 +13,7 @@
          
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div class="container-fluid"> 
-                <a class="navbar-brand" href="{{url_}}"><span style="color:green">in </span><span style="color:white">itali</span><span style="color:red">ano</span></a>
+                <a class="navbar-brand" href="{{url_for('index')}}"><span style="color:green">in </span><span style="color:white">itali</span><span style="color:red">ano</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,7 +24,7 @@
                             <a class="nav-link" href="{{url_for('index')}}">Articoli</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url_for('about')}}">About Me</a>
+                            <a class="nav-link" href="{{url_for('grammatica')}}">Grammatica</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/dagrewal/initaliano">GitHub</a>
@@ -82,6 +82,16 @@
                                     <h5 class="card-title">Vicini di casa</h5>
                                     <p class="card-text">Il mio insegnante chiede mi a finisco una storia su vicini da casa</p>
                                     <a href="{{url_for('vicini_di_casa')}}" class="btn btn-primary">Leggere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card border-dark" style="width: 18rem;">
+                                <img src="../static/images/una_domanda_di_sport.jpeg" width="286" height="180" alt="Una domanda di sport">
+                                <div class="card-body">
+                                    <h5 class="card-title">Una domanda di sport</h5>
+                                    <p class="card-text">Il mio insegnante chiede mi qualche domande di sport</p>
+                                    <a href="{{url_for('domanda_di_sport')}}" class="btn btn-primary">Leggere</a>
                                 </div>
                             </div>
                         </div>

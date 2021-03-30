@@ -11,12 +11,17 @@ def index():
 
     return render_template('index.html')
 
-@app.route("/about")
-def about():
-
-    return render_template("about.html")
-
 @app.route("/vicini-di-casa")
 def vicini_di_casa():
 
     return render_template("vicini di casa.html")
+
+@app.route("/grammatica.html")
+def grammatica():
+
+    return render_template("grammatica.html")
+
+@app.route("/domanda-di-sport")
+def domanda_di_sport():
+
+    return render_template("domanda di sport.html")
